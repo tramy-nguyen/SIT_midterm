@@ -1,0 +1,249 @@
+:root {
+    /* Colors */
+    --underline-color: var(--primary-color);
+
+    --menu-text-color: var(--text-color);
+    --menu-text-hover-color: var(--primary-color);
+    --menu-text-active-color: var(--primary-color);
+
+    --menu-side-text-color: var(--primary-color);
+    --menu-side-text-hover-color: var(--secondary-background-color);
+    --menu-side-text-active-color: var(--secondary-background-color);
+
+    --menu-bg-color: var(--secondary-background-color);
+
+    /* Sizing */
+    --menu-height: 5rem;
+    --menu-side-width: 250px;
+    --toggle-menu-hamburger-width: 120px;
+
+    --menu-link-width: max-content;
+    --underline-height: 4px;
+
+    /* Spacing */
+    --menu-gap: var(--spacer-xl);
+    --menu-link-padding: var(--spacer-lg);
+    --menu-link-padding-inline: var(--spacer-xl);
+
+    /* Font Styles */
+    --menu-link-font-variation-settings-normal: var(--font-variation-settings-normal);
+    --menu-link-font-variation-settings-hover:  var(--font-variation-settings-hover);
+    --menu-link-font-variation-settings-active: var(--font-variation-settings-active);
+    --text-transform: uppercase;
+
+    /* Transitions */
+    --transition-speed-slide: var(--duration-xslow);
+    --transition-speed-link: var(--duration-slow);
+    --transition-speed-burger: var(--duration-xslow);
+    --transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+header {
+    display: flex;
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    height: var(--menu-height);
+    text-transform: var(--text-transform);
+    justify-content: space-between;
+}
+
+.logo {
+    padding-left: var(--spacer-sm);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Hide checkbox */
+#toggle-menu,
+.text-toggle-menu,
+.hamburger svg {
+  display: none;
+}
+
+/* Hamburger Icon */
+.hamburger svg {
+  height: 1.6rem;
+  transition: transform var(--transition-speed-burger) var(--transition-easing);
+}
+
+/* Menu Styles */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: var(--menu-gap);
+}
+
+/* Menu Link */
+.menu-link {
+    width: var(--menu-link-width);
+    transition: font-variation-settings var(--transition-speed-link) var(--transition-easing);
+    font-variation-settings: var(--menu-link-font-variation-settings-normal);
+    position: relative;
+    display: block;
+    padding: var(--menu-link-padding);
+    padding-inline: var(--menu-link-padding-inline);
+    text-align: center;
+    color: var(--menu-text-color);
+}
+
+.menu-link::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    transform: scaleX(0);
+    height: var(--underline-height);
+    bottom: 0;
+    left: 0;
+    background-color: var(--underline-color);
+    transform-origin: left;
+    transition: transform var(--transition-speed-link) var(--transition-easing);
+}
+
+.menu-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.menu-link:hover {
+    color: var(--menu-text-hover-color);
+    font-variation-settings: var(--menu-link-font-variation-settings-hover);
+}
+
+
+.menu-link:active, .active {
+    color: var(--menu-text-active-color);
+    font-variation-settings: var(--menu-link-font-variation-settings-active);
+}
+
+.active::after {
+    transform: scaleX(1);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    /* Styles for the hamburger button */
+    .hamburger {
+        box-sizing: content-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        z-index: 3;
+        position: absolute;
+        right: 0;
+        width: var(--toggle-menu-hamburger-width);
+        height: var(--menu-height);
+        padding: 0 var(--menu-gap);
+        transition: width var(--transition-speed-slide) var(--transition-easing);
+    }
+
+    .text-toggle-menu, .hamburger svg {
+        display: block;
+    }
+
+    /* Move the hamburger button when opening the menu */
+    #toggle-menu:checked ~ .hamburger {
+        width: calc(var(--menu-side-width) - 4rem);
+    }
+
+    /* Burger Icon animation */
+    .line {
+        fill: none;
+        stroke: var(--menu-text-color);
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3;
+        transition: stroke-dasharray var(--transition-speed-burger) var(--transition-easing),
+                    stroke-dashoffset var(--transition-speed-burger) var(--transition-easing);
+    }
+
+    .line-top-bottom {
+        stroke-dasharray: 12 63;
+    }
+
+    #toggle-menu:checked ~ .hamburger svg {
+        transform: rotate(-45deg);
+    }
+
+    #toggle-menu:checked ~ .hamburger .line-top-bottom {
+        stroke-dasharray: 20 300;
+        stroke-dashoffset: -32.42;
+    }
+
+    /* Styles for the overlay */
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--overlay-bg-color);
+        z-index: 1;
+    }
+
+    /* Display the overlay when the checkbox is checked */
+    #toggle-menu:checked ~ .overlay {
+        display: block;
+    }
+
+    /* Display the menu when the checkbox is checked */
+    #toggle-menu:checked ~ .menu {
+        transform: translateX(calc(-1 * var(--menu-side-width)));
+    }
+
+    /* Styles for the menu */
+    .menu {
+        position: fixed;
+        align-items: flex-start;
+        right: calc(-1 * var(--menu-side-width));
+        width: var(--menu-side-width);
+        height: 100%;
+        background-color: var(--menu-bg-color);
+        transition: transform var(--transition-speed-slide) var(--transition-easing);
+        z-index: 2;
+    }
+
+    .menu ul {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        height: auto;
+        width: var(--menu-side-width);
+        margin-top: var(--menu-height);
+        gap: 0;
+    }
+
+    /* Menu Link */
+    .menu-link {
+        display: flex;
+        width: 100%;
+        z-index: 1;
+        text-align: flex-start;
+        color: var(--menu-side-text-color);
+    }
+
+    .menu-link::after {
+        height: 100%;
+    }
+
+    .menu-link:hover {
+        color: var(--menu-side-text-hover-color);
+    }
+
+    .menu-link:active, .active {
+        color: var(--menu-side-text-active-color);
+    }
+}

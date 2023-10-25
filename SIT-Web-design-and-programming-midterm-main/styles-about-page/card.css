@@ -1,0 +1,29 @@
+:root {
+    --card-border-radius: var(--border-radius-md);
+    --card-background-color: var(--secondary-background-color);
+    --card-box-shadow: var(--box-shadow);
+    --card-md-padding: var(--spacer-md);
+    --card-sm-padding: var(--spacer-xxs);
+}
+  
+.card {
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    border-radius: var(--card-border-radius);
+    background-color: var(--card-background-color);
+    box-shadow: var(--card-box-shadow);
+}
+
+.card-content {
+    box-sizing: content-box;
+    padding: var(--card-md-padding);
+    transition: padding var(--duration-xslow) ease-in-out;
+}
+
+@media only screen and (max-width: 767px) {
+    .card-content {
+        box-sizing: content-box;
+        padding: var(--card-sm-padding);
+    }
+}

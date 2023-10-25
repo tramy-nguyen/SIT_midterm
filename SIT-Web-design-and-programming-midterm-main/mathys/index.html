@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web design & programming</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:slnt,wdth,wght,GRAD@0,151,350,10&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/theme.css">
+    <link rel="stylesheet" href="../styles/generic.css">
+    <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="stylesheet" href="../styles/scaffold-layout.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles-about-page/card.css">
+    <link rel="stylesheet" href="../styles-about-page/gallery.css">
+    <link rel="stylesheet" href="../styles-about-page/profile.css">
+    <link rel="stylesheet" href="../styles-about-page/dropdown.css">
+    <link rel="stylesheet" href="../styles-about-page/timeline.css">
+    <link rel="stylesheet" href="../styles-about-page/style.css">
+    <link rel="stylesheet" href="../styles-about-page/contact.css">
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">
+        <a href="./index.html">SIT</a>
+      </h1>
+      <div class="full-background glassmorphism"></div>
+      <input type="checkbox" id="toggle-menu">
+      <label for="toggle-menu" class="hamburger">
+        <span class="text-toggle-menu">Menu</span>
+        <svg viewBox="0 0 32 32">
+          <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+          <path class="line" d="M7 16 27 16"></path>
+        </svg>
+      </label>
+      <label for="toggle-menu" class="overlay"></label>
+      <nav class="menu">
+        <ul>
+          <li>
+            <a class="menu-link" href="../index.html">Home</a>
+          </li>
+          <li>
+            <a class="menu-link" href="../tramy/index.html">Tra&nbsp;My</a>
+          </li>
+          <li>
+            <a class="menu-link" href="../marine/index.html">Marine</a>
+          </li>
+          <li>
+            <a class="menu-link active" href="#">Mathys</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="scaffold-layout">
+        <div class="scaffold-layout-content">
+
+          <section class="card glassmorphism">
+            <img class="profile-banner" src="assets/banner.png" alt="Banner">
+            <div class="card-content">
+              <div class="top-profile-picture">
+                <img class="profile-picture" src="assets/Small/pp.jpg" alt="Profile">
+              </div>
+              <p class="location">Tokyo</p>
+              <h1>Mathys Paul <a href="#belgium"><img class="profile-flag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/langfr-225px-Flag_of_Belgium.svg.png" alt="Belgian flag"></a></h1>
+              <p>Student in software engineering at Epitech Paris  | Studying abroad in Tokyo at Shibaura Institute of Technology</p>
+            </div>
+          </section>
+          <section class="card glassmorphism">
+            <div class="card-content">
+              <h1>My career path</h1>
+              <section class="timeline">
+                <div class="timeline-block">
+                  <div class="chronology-marker">
+                    <img src="./assets/logo/epitech.png" alt="Epitech Logo">
+                  </div>
+                  <div class="event">
+                    <div class="event-header">
+                      <h2 class="event-title">Epitech</h2>
+                      <span class="event-date">2019-2020</span>
+                    </div>
+                    <p class="event-paragraph">First year undergraduate</p>
+                  </div>
+                </div>
+
+                <div class="timeline-block right">
+                  <div class="chronology-marker">
+                    <img src="./assets/logo/talos.png" alt="Talos Logo">
+                  </div>
+                  <div class="event">
+                    <div class="event-header">
+                      <h2 class="event-title">Talos - Health Web Events</h2>
+                      <span class="event-date">2020</span>
+                    </div>
+                    <p class="event-paragraph">Internship 5 days a week for 6 months</p>
+                  </div>
+                </div>
+
+                <div class="timeline-block">
+                  <div class="chronology-marker">
+                    <img src="./assets/logo/epitech.png" alt="Epitech Logo">
+                  </div>
+                  <div class="event">
+                    <div class="event-header">
+                      <h2 class="event-title">Epitech</h2>
+                      <span class="event-date">2020-2021</span>
+                    </div>
+                    <p class="event-paragraph">Second year undergraduate</p>
+                  </div>
+                </div>
+
+                <div class="timeline-block right">
+                  <div class="chronology-marker">
+                    <img src="./assets/logo/giveaction.png" alt="Giveaction Logo">
+                  </div>
+                  <div class="event">
+                    <div class="event-header">
+                      <h2 class="event-title">GiveAction</h2>
+                      <span class="event-date">2021</span>
+                    </div>
+                    <p class="event-paragraph">Internship 2 days a week for 6 month</p>
+                  </div>
+                </div>
+
+                <div class="timeline-block">
+                  <div class="chronology-marker">
+                    <img src="./assets/logo/epitech.png" alt="Epitech Logo">
+                  </div>
+                  <div class="event">
+                    <div class="event-header">
+                      <h2 class="event-title">Epitech</h2>
+                      <span class="event-date">2021-2022</span>
+                    </div>
+                    <p class="event-paragraph">Third year undergraduate</p>
+                  </div>
+                </div>
+
+                <div class="timeline-block right">
+                  <div class="chronology-marker">
+                    <img src="./assets/logo/sv.png" alt="Saper Vedere Logo">
+                  </div>
+                  <div class="event">
+                    <div class="event-header">
+                      <h2 class="event-title">Saper Vedere</h2>
+                      <span class="event-date">2022</span>
+                    </div>
+                    <p class="event-paragraph">Internship 5 days a week for 6 months</p>
+                  </div>
+                </div>
+            
+                <div class="timeline-block">
+                  <div class="chronology-marker">
+                    <img src="./assets/logo/sit.png" alt="Shibaura Institute of Technology Logo">
+                  </div>
+                  <div class="event">
+                    <div class="event-header">
+                      <h2 class="event-title">Shibaura Institute of Technology</h2>
+                      <span class="event-date">2022-2023</span>
+                    </div>
+                    <p class="event-paragraph">First year graduate</p>
+                  </div>
+                </div>
+
+              </div>
+          </section>
+          <section class="card glassmorphism">
+            <div class="card-content">
+              <h2>My SIT courses</h2>
+              <div class="dropdown-list">
+                <div class="dropdown-block">
+                  <input type="checkbox" id="toggle-project-0" class="toggle-info">
+                  <label for="toggle-project-0" class="label-info">
+                    <div class="dropdown-label">
+                      <div class="dropdown-label-left">
+                        <h2 class="dropdown-label-title">Data Communication Network</h2>
+                        <ul class="tech-tags"></ul>
+                      </div>
+                      <div class="dropdown-label-right">
+                        <span class="dropdown-label-addon">Sem 1</span>
+                        <span class="arrow"></span>
+                      </div>
+                    </div>
+                    <div class="dropdown-conent-container">
+                      <div class="dropdown-cotent">
+                        <ul class="keyword-tags">
+                          <li>Ethernet</li>
+                          <li>Internet protocols</li>
+                          <li>Routing</li>
+                          <li>Multicast</li>
+                          <li>Mobile communication</li>
+                          <li>Content dissemination</li>
+                        </ul>
+                        <p>This course covers multimedia data communication methods based on content distribution and networking technologies. The topics covered include: (1) unicast communications, (2) multicast communications, (3) mobile or sensor multi-hop communications, and (4) latest trends in data dissemination methods. The objectives of the course are to enable students to understand unicast and multicast communication protocols, particularly routing and group management protocols, discuss the latest trends in data dissemination methods, and enhance their presentation skills. The curriculum includes courses on Ethernet and Internet protocols, client/server systems, unicast and multicast routing protocols, multicast group management, mobile or sensor multi-hop communications, and the latest trends in content dissemination. Students are also required to prepare and present reports on the topics studied.</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="dropdown-block">
+                  <input type="checkbox" id="toggle-project-1" class="toggle-info">
+                  <label for="toggle-project-1" class="label-info">
+                    <div class="dropdown-label">
+                      <div class="dropdown-label-left">
+                        <h2 class="dropdown-label-title">Mechatronics</h2>
+                        <ul class="tech-tags">
+                          <li>Arduino</li>
+                          <li>C++</li>
+                          <li>Python</li>
+                        </ul>
+                      </div>
+                      <div class="dropdown-label-right">
+                        <span class="dropdown-label-addon">Sem 1</span>
+                        <span class="arrow"></span>
+                      </div>
+                    </div>
+                    <div class="dropdown-conent-container">
+                      <div class="dropdown-cotent">
+                        <ul class="keyword-tags">
+                          <li>Microcomputers</li>
+                          <li>Sensors</li>
+                          <li>Image processing</li>
+                          <li>Robotics</li>
+                          <li>Control systems</li>
+                        </ul>
+                        <p>The Mechatronics course explores the technical foundations of mechatronics, a field that combines mechanics, electronics, and information technology (sensors, computers, control, information processing). Students will learn to understand and explain (1) microcomputer systems, including configuration, tools, digital and analog inputs/outputs, and serial communication, (2) sensor systems, such as potentiometers, encoders, ultrasound sensors, acceleration sensors, temperature sensors, and humidity sensors, (3) image processing technologies, such as image input methods, binarization, affine transformation, threshold determination, and median filters, and (4) robotic systems, including control and sensor systems, and tracking or avoidance behaviors. This course provides a comprehensive overview of mechatronics, enabling students to master key concepts and apply this knowledge in various practical applications.</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="dropdown-block">
+                  <input type="checkbox" id="toggle-project-2" class="toggle-info">
+                  <label for="toggle-project-2" class="label-info">
+                    <div class="dropdown-label">
+                      <div class="dropdown-label-left">
+                        <h2 class="dropdown-label-title">Introduction to Computer Networks</h2>
+                        <ul class="tech-tags"></ul>
+                      </div>
+                      <div class="dropdown-label-right">
+                        <span class="dropdown-label-addon">Sem 1</span>
+                        <span class="arrow"></span>
+                      </div>
+                    </div>
+                    <div class="dropdown-conent-container">
+                      <div class="dropdown-cotent">
+                        <ul class="keyword-tags">
+                          <li>Web protocols</li>
+                          <li>TCP/IP</li>
+                          <li>Routing</li>
+                          <li>Switching</li>
+                          <li>Security</li>
+                          <li>Wireless networks</li>
+                        </ul>
+                        <p>This course covers the fundamentals of computer networks, with a focus on Internet architecture and communication protocols. Students will learn about the different layers of network architectures, including the application, transport, network, and link layers. Topics covered include Web/HTTP, DNS, FTP/SMTP/IMAP/P2P, UDP, socket programming for UDP, TCP, congestion control, routers, queuing, IP (Internet Protocol), network address translation, routing protocols, ICMP, SNMP, error detection and correction methods, multiple access networks, switches, address resolution, computer network security, encryption methods, public key cryptography, wireless and mobile networks, cellular network architectures, and ad hoc mobile networks. The main objective is to provide students with essential knowledge to understand computer networks and Internet architecture, as well as develop practical skills in network programming, Wireshark analysis, and error detection method implementation.</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="dropdown-block">
+                  <input type="checkbox" id="toggle-project-3" class="toggle-info">
+                  <label for="toggle-project-3" class="label-info">
+                    <div class="dropdown-label">
+                      <div class="dropdown-label-left">
+                        <h2 class="dropdown-label-title">Introduction to Multimedia technology</h2>
+                        <ul class="tech-tags">
+                          <li>Python</li>
+                          <li>C</li>
+                        </ul>
+                      </div>
+                      <div class="dropdown-label-right">
+                        <span class="dropdown-label-addon">Sem 1</span>
+                        <span class="arrow"></span>
+                      </div>
+                    </div>
+                    <div class="dropdown-conent-container">
+                      <div class="dropdown-cotent">
+                        <ul class="keyword-tags">
+                          <li>Image processing</li>
+                          <li>Computer vision</li>
+                          <li>Deep learning</li>
+                          <li>Image rendering</li>
+                        </ul>
+                        <p>Introduction to Multimedia technology is a course aimed at providing students with a solid understanding of the basics of image processing and computer vision. This course covers topics such as spatial image processing, frequency domain processing, photometry, color processing, and deep learning for computer vision. Students will also learn to develop practical applications through various assignments. In addition to mastering key concepts, students will develop programming, teamwork, and critical thinking skills. The course requires prior knowledge of linear algebra. Advanced topics such as feature detection and matching, motion estimation, stereo camera modeling, and 3D reconstruction will also be explored. By the end of the course, students will be better prepared to conduct research in various areas of multimedia technologies, such as image and video processing, and image rendering.</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="dropdown-block">
+                  <input type="checkbox" id="toggle-project-4" class="toggle-info">
+                  <label for="toggle-project-4" class="label-info">
+                    <div class="dropdown-label">
+                      <div class="dropdown-label-left">
+                        <h2 class="dropdown-label-title">Information Literacy</h2>
+                        <ul class="tech-tags"></ul>
+                      </div>
+                      <div class="dropdown-label-right">
+                        <span class="dropdown-label-addon">Sem 1</span>
+                        <span class="arrow"></span>
+                      </div>
+                    </div>
+                    <div class="dropdown-conent-container">
+                      <div class="dropdown-cotent">
+                        <ul class="keyword-tags">
+                          <li>Information theory</li>
+                          <li>Computer architecture</li>
+                          <li>Operating systems</li>
+                          <li>Security</li>
+                        </ul>
+                        <p>This course aims to provide the necessary knowledge to understand the basic principles of information and computers. The topics covered include information theory, computer architecture, and operating systems. The objectives of the course are to familiarize students with information, computers, and their operations, from the lowest level (bits) to hardware architecture. The topics studied include the history of information and computers, syntax, semantics, digital data, Boolean logic, logic gates, number representation, entropy, transmission, cryptography, quantum computing, computer architecture, hardware, sensors, software, operating systems, security, and viruses. The course also includes group presentations and an examination.</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="dropdown-block">
+                  <input type="checkbox" id="toggle-project-5" class="toggle-info">
+                  <label for="toggle-project-5" class="label-info">
+                    <div class="dropdown-label">
+                      <div class="dropdown-label-left">
+                        <h2 class="dropdown-label-title">Introduction to Computer Programming (Python, R, C, Java)</h2>
+                        <ul class="tech-tags">
+                          <li>Python</li>
+                          <li>R</li>
+                          <li>C</li>
+                          <li>Java</li>
+                        </ul>
+                      </div>
+                      <div class="dropdown-label-right">
+                        <span class="dropdown-label-addon">Sem 1</span>
+                        <span class="arrow"></span>
+                      </div>
+                    </div>
+                    <div class="dropdown-conent-container">
+                      <div class="dropdown-cotent">
+                        <ul class="keyword-tags">
+                          <li>Programming basics</li>
+                          <li>data structures</li>
+                          <li>algorithms</li>
+                        </ul>
+                        <p>This Introduction to Computer Programming course teaches the fundamental principles of programming using languages such as Python, R, C, and Java, with a focus on the C language. Students will learn to write programs and develop algorithms to solve complex engineering problems. Topics covered include data structures, data manipulation, basic programming constructs, computing, data and file management under UNIX, types, operators, expressions, control structures, arrays, input and output files, functions, program structures, and pointers. Practical exercises and exams are included to reinforce programming skills.</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="dropdown-block">
+                  <input type="checkbox" id="toggle-project-6" class="toggle-info">
+                  <label for="toggle-project-6" class="label-info">
+                    <div class="dropdown-label">
+                      <div class="dropdown-label-left">
+                        <h2 class="dropdown-label-title">Exercises on Object-Oriented Programming</h2>
+                        <ul class="tech-tags">
+                          <li>Java</li>
+                        </ul>
+                      </div>
+                      <div class="dropdown-label-right">
+                        <span class="dropdown-label-addon">Sem 1</span>
+                        <span class="arrow"></span>
+                      </div>
+                    </div>
+                    <div class="dropdown-conent-container">
+                      <div class="dropdown-cotent">
+                        <ul class="keyword-tags">
+                          <li>Object-oriented programming</li>
+                          <li>Design patterns</li>
+                        </ul>
+                        <p>
+                          The Exercises on Object-Oriented Programming course aims to provide knowledge and practical experience in object-oriented programming using the Java language. Students will learn to program in Java using various APIs and writing patterns. The objectives of the course are to enable students to master the basic concepts of object-oriented programming, understand and use the collections framework, and know and apply common design patterns. The course curriculum includes topics such as an introduction to object-oriented programming, Java programming with classes, objects, encapsulation, inheritance, abstraction, polymorphism, interfaces, collections, generics, input/output, streams, and threads, as well as design patterns for creation, structure, and behavior. Practical exercises are included throughout the course to reinforce object-oriented programming skills.
+                          <br>
+                          <h4>Final Project</h4>
+                          <br>
+                          <img src="./assets/final-project.png" alt="Final Project: little Naruto game">
+                        </p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="dropdown-block">
+                  <input type="checkbox" id="toggle-project-7" class="toggle-info">
+                  <label for="toggle-project-7" class="label-info">
+                    <div class="dropdown-label">
+                      <div class="dropdown-label-left">
+                        <h2 class="dropdown-label-title">Science and Religion in Japan</h2>
+                        <ul class="tech-tags"></ul>
+                      </div>
+                      <div class="dropdown-label-right">
+                        <span class="dropdown-label-addon">Sem 1</span>
+                        <span class="arrow"></span>
+                      </div>
+                    </div>
+                    <div class="dropdown-conent-container">
+                      <div class="dropdown-cotent">
+                        <ul class="keyword-tags">
+                          <li>Japanese history</li>
+                          <li>science and religion</li>
+                          <li>modern Japanese society</li>
+                        </ul>
+                        <p>The Science and Religion in Japan course examines lesser-known aspects of Japanese history, focusing on the relationship between science and religion. It aims to help students understand the impact of the arrival of Western religion and science on Japanese concepts and their influence on modern Japanese society. In the 16th century, Japan was unified and established contacts with Western civilization, acquiring technology, science, art, and craftsmanship from the West, as well as Christianity. However, the modernization process was interrupted when Christianity was banned. The course objectives include familiarizing students with the characteristics of certain religious traditions in Japan, studying different cultures, religions, and races that played a significant role in Japanese history, understanding the value of equity in the field of history, and the importance of interdisciplinary approaches in humanities courses. The course is taught in English and includes presentations, discussions, and written assignments to enhance student learning.</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="dropdown-block">
+                  <input type="checkbox" id="toggle-project-8" class="toggle-info">
+                  <label for="toggle-project-8" class="label-info">
+                    <div class="dropdown-label">
+                      <div class="dropdown-label-left">
+                        <h2 class="dropdown-label-title">Japanese Language 1</h2>
+                        <ul class="tech-tags"></ul>
+                      </div>
+                      <div class="dropdown-label-right">
+                        <span class="dropdown-label-addon">Sem 1</span>
+                        <span class="arrow"></span>
+                      </div>
+                    </div>
+                    <div class="dropdown-conent-container">
+                      <div class="dropdown-cotent">
+                        <ul class="keyword-tags">
+                          <li>Japanese language</li>
+                          <li>grammar</li>
+                          <li>nouns</li>
+                          <li>verbs</li>
+                          <li>adjectives</li>
+                        </ul>
+                        <p>Japanese Language 1 is an introduction to the Japanese language for beginners. Students will learn the structure of Japanese sentences with nouns, verbs, and adjectives in order to engage in simple daily conversations. The content and progression of each lesson can be adapted to the level and needs of each student, and the classes are conducted exclusively in Japanese. The goal of the course is to learn the basic grammar of Japanese and acquire the ability to engage in simple conversations such as introducing oneself or talking about one's daily schedule. Specific objectives include understanding sentence structure with nouns to introduce oneself and ask questions about places, understanding sentence structure with verbs to ask and answer questions about future and past schedules, and understanding sentence structure with adjectives to ask and answer questions about impressions of people and things. The course includes practical exercises and activities to reinforce student learning.</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="dropdown-block">
+                  <input type="checkbox" id="toggle-project-9" class="toggle-info">
+                  <label for="toggle-project-9" class="label-info">
+                    <div class="dropdown-label">
+                      <div class="dropdown-label-left">
+                        <h2 class="dropdown-label-title">Management of Innovation</h2>
+                        <ul class="tech-tags"></ul>
+                      </div>
+                      <div class="dropdown-label-right">
+                        <span class="dropdown-label-addon">Sem 1</span>
+                        <span class="arrow"></span>
+                      </div>
+                    </div>
+                    <div class="dropdown-conent-container">
+                      <div class="dropdown-cotent">
+                        <ul class="keyword-tags">
+                          <li>Innovation</li>
+                          <li>Business context</li>
+                          <li>Problem-solving</li>
+                          <li>Strategic planning</li>
+                        </ul>
+                        <p>The Management of Innovation course deals with understanding and managing innovation in a business and social context. It covers the definition, history, and theories of innovation, as well as methods and tools to apply them to real problem-solving. The goal is to gain basic knowledge and methodologies in innovation and be able to apply them to solve concrete problems in business and society. Specific objectives include understanding the concept and process of innovation, researching and analyzing existing markets and products to develop competitive strategies or new ventures, and generating and organizing ideas to develop a business model and business strategy. The course includes presentations, group discussions, group work, and workshops to enhance student learning.</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="dropdown-block">
+                  <input type="checkbox" id="toggle-project-10" class="toggle-info">
+                  <label for="toggle-project-10" class="label-info">
+                    <div class="dropdown-label">
+                      <div class="dropdown-label-left">
+                        <h2 class="dropdown-label-title">Marketing International</h2>
+                        <ul class="tech-tags"></ul>
+                      </div>
+                      <div class="dropdown-label-right">
+                        <span class="dropdown-label-addon">Sem 1</span>
+                        <span class="arrow"></span>
+                      </div>
+                    </div>
+                    <div class="dropdown-conent-container">
+                      <div class="dropdown-cotent">
+                        <ul class="keyword-tags">
+                          <li>Marketing concepts</li>
+                          <li>Market analysis</li>
+                          <li>Digital marketing</li>
+                          <li>International marketing</li>
+                        </ul>
+                        <p>The Marketing International course aims to familiarize students with key marketing concepts and theories and prepare them to apply them in the real world. The course curriculum covers a variety of topics, ranging from basic marketing knowledge to the latest trends in digital marketing. The objectives of the course are to enable students to understand marketing concepts and theories, use frameworks and tools to analyze markets and competitors, and formulate and propose appropriate marketing plans based on the situation. Topics covered include the evolution of marketing, marketing processes, company vision and SWOT analysis, market segmentation, product planning and pricing policies, sales promotion and distribution, customer journey mapping, and digital marketing. The course also includes report presentations, group discussions, and practical exercises to enhance student understanding and develop international marketing skills.</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="dropdown-block">
+                  <input type="checkbox" id="toggle-project-11" class="toggle-info">
+                  <label for="toggle-project-11" class="label-info">
+                    <div class="dropdown-label">
+                      <div class="dropdown-label-left">
+                        <h2 class="dropdown-label-title">Advanced OS and Virtualization</h2>
+                        <ul class="tech-tags"></ul>
+                      </div>
+                      <div class="dropdown-label-right">
+                        <span class="dropdown-label-addon">Sem 2</span>
+                        <span class="arrow"></span>
+                      </div>
+                    </div>
+                    <div class="dropdown-conent-container">
+                      <div class="dropdown-cotent">
+                        <ul class="keyword-tags">
+                          <li>Virtualization</li>
+                          <li>Operating systems</li>
+                          <li>Cloud computing</li>
+                        </ul>
+                        <p>The Advanced OS and Virtualization course addresses the understanding of virtualization and the role of operating systems based on cloud computing trends. The main objectives are to teach students to analyze binary file structure, emulate essential binary operators for virtualization, and simulate system calls. The curriculum, organized into 14 sessions, covers an introduction to virtualization, setting up the environment, implementing an interpreter, implementing various system calls, and executing programs written in assembly language. Students will also study the C language and 8086 specifications and implement interpreters for various programs. This course will equip students with essential skills to understand and implement virtualization in the context of modern operating systems.</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="dropdown-block">
+                  <input type="checkbox" id="toggle-project-12" class="toggle-info">
+                  <label for="toggle-project-12" class="label-info">
+                    <div class="dropdown-label">
+                      <div class="dropdown-label-left">
+                        <h2 class="dropdown-label-title">Software Design</h2>
+                        <ul class="tech-tags"></ul>
+                      </div>
+                      <div class="dropdown-label-right">
+                        <span class="dropdown-label-addon">Sem 2</span>
+                        <span class="arrow"></span>
+                      </div>
+                    </div>
+                    <div class="dropdown-conent-container">
+                      <div class="dropdown-cotent">
+                        <ul class="keyword-tags">
+                          <li>Software design</li>
+                          <li>UML</li>
+                          <li>Modeling</li>
+                          <li>Software development processes</li>
+                        </ul>
+                        <p>The Software Design course teaches the foundations of software design and software engineering. It emphasizes software modeling and various modeling techniques. The objectives of the course are to understand the basics of software design, learn to read UML (Unified Modeling Language) documents, and understand methods for describing various aspects of software. Topics covered include software development, modeling, class and object diagrams, sequence and state diagrams, activity diagrams, scenarios and use cases, requirements engineering, validation and verification, software processes, and model-driven development.</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="dropdown-block">
+                  <input type="checkbox" id="toggle-project-13" class="toggle-info">
+                  <label for="toggle-project-13" class="label-info">
+                    <div class="dropdown-label">
+                      <div class="dropdown-label-left">
+                        <h2 class="dropdown-label-title">Probability and Statistics</h2>
+                        <ul class="tech-tags"></ul>
+                      </div>
+                      <div class="dropdown-label-right">
+                        <span class="dropdown-label-addon">Sem 2</span>
+                        <span class="arrow"></span>
+                      </div>
+                    </div>
+                    <div class="dropdown-conent-container">
+                      <div class="dropdown-cotent">
+                        <ul class="keyword-tags">
+                          <li>Probability</li>
+                          <li>Statistics</li>
+                          <li>Statistical analysis</li>
+                          <li>Hypothesis testing</li>
+                        </ul>
+                        <p>The Probability and Statistics course teaches the basic concepts of probability and statistics through theory and applications. Students will learn fundamental probability concepts such as conditional probability, independence, probability distributions, random variables, expectation, the law of large numbers, as well as useful statistical methods like bootstrapping, maximum likelihood estimators, confidence intervals, and hypothesis testing. The aim of the course is to provide students with foundational knowledge and skills in probability and statistics used in the fields of science and engineering. The course curriculum includes 14 sessions covering various topics such as discrete and continuous distributions, probability mass and density functions, covariance and correlation, exploratory data analysis, and sample size determination for statistical inference.</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="dropdown-block">
+                  <input type="checkbox" id="toggle-project-14" class="toggle-info">
+                  <label for="toggle-project-14" class="label-info">
+                    <div class="dropdown-label">
+                      <div class="dropdown-label-left">
+                        <h2 class="dropdown-label-title">Web Design and Programming</h2>
+                        <ul class="tech-tags">
+                          <li>HTML</li>
+                          <li>CSS</li>
+                          <li>JS</li>
+                          <li>PHP</li>
+                        </ul>
+                      </div>
+                      <div class="dropdown-label-right">
+                        <span class="dropdown-label-addon">Sem 2</span>
+                        <span class="arrow"></span>
+                      </div>
+                    </div>
+                    <div class="dropdown-conent-container">
+                      <div class="dropdown-cotent">
+                        <ul class="keyword-tags">
+                          <li>Responsive design</li>
+                          <li>Client-side programming</li>
+                        </ul>
+                        <p>The Web Design and Programming course introduces students to the basic concepts of the World Wide Web, as well as the principles and tools used to develop web applications. Students will learn the key protocols and technologies that form the foundation of the internet, as well as essential principles of functional web design, including information architecture and user experience. The curriculum covers topics such as an introduction to the World Wide Web, an overview of internet technologies and protocols, principles of functional web design, creating responsive and well-designed web pages, client-side programming for interactive web pages, and server-side scripting languages for generating dynamic web content. Through lectures, practical exercises, and projects, students will develop practical skills in web development and understand how to create effective and appealing web applications. By the end of the course, they will have the knowledge and tools necessary to design and develop their own interactive and responsive web pages. The course aims to teach the core technologies of web design and programming, including HTML, CSS, JS, and PHP.</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="dropdown-block">
+                  <input type="checkbox" id="toggle-project-15" class="toggle-info">
+                  <label for="toggle-project-15" class="label-info">
+                    <div class="dropdown-label">
+                      <div class="dropdown-label-left">
+                        <h2 class="dropdown-label-title">Autonomous Mobile Robot System</h2>
+                        <ul class="tech-tags"></ul>
+                      </div>
+                      <div class="dropdown-label-right">
+                        <span class="dropdown-label-addon">Sem 2</span>
+                        <span class="arrow"></span>
+                      </div>
+                    </div>
+                    <div class="dropdown-conent-container">
+                      <div class="dropdown-cotent">
+                        <ul class="keyword-tags">
+                          <li>Robot sensors</li>
+                          <li>Image processing</li>
+                          <li>Navigation</li>
+                          <li>Obstacle avoidance</li>
+                        </ul>
+                        <p>The Autonomous Mobile Robot System course explores key technologies involved in the development of autonomous mobile robots, covering robot sensors, image processing, feature recognition, microcomputer systems, navigation, and obstacle avoidance. Students will gain a deep understanding of various aspects of these systems, including potentiometers, encoders, ultrasound sensors, accelerometers, gyroscopes, binarization, affine transformation, histograms, median filters, discriminant analysis, clustering, digital and analog inputs/outputs, serial communication, motor control, obstacle avoidance techniques, localization and position estimation, as well as behavior and control of autonomous mobile robots. Course assessments include short reports and practical assignments to allow students to apply the knowledge they have acquired.</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="card glassmorphism">
+            <div class="card-content">
+              <h1>My favourite Anime</h1>
+              <div class="gallery square-gallery">
+                <div class="image-card">
+                  <img src="https://cdn.dribbble.com/users/569653/screenshots/6003302/media/ba4d7d449f82a2dfbaf54c3597dd4ca7.png" alt="One Piece cover">
+                  <div class="image-card-overlay">
+                    <h2 class="image-card-title">One Piece</h2>
+                    <p class="image-card-description">The best !</p>
+                    <div class="image-card-icon">
+                      <img src="../assets/icon/trophy.png" alt="trophy-icon" srcset="">
+                    </div>
+                  </div>
+                </div>
+                <div class="image-card">
+                  <img src="https://cdn.dribbble.com/users/6000583/screenshots/15207049/media/8f1ce4f6309234971b91b9876d4bfcde.jpg" alt="Naruto cover">
+                  <div class="image-card-overlay">
+                    <h2 class="image-card-title">Naruto</h2>
+                    <p class="image-card-description">My favourite ! The one I grew up with.</p>
+                    <div class="image-card-icon">
+                      <img src="../assets/icon/hearth.png" alt="hearth-icon" srcset="">
+                    </div>
+                  </div>
+                </div>
+                <div class="image-card">
+                  <img src="https://cdn.dribbble.com/userupload/6754944/file/original-a84d2ef6c53dd726fdcbc263bfa63440.jpg?compress=1&resize=752x" alt="My Hero Academia cover">
+                  <div class="image-card-overlay">
+                    <h2 class="image-card-title">My Hero Academia</h2>
+                    <p class="image-card-description">The super star.</p>
+                    <div class="image-card-icon">
+                      <img src="../assets/icon/star.png" alt="star-icon" srcset="">
+                    </div>
+                  </div>
+                </div>
+                <div class="image-card">
+                  <img src="https://cdn.dribbble.com/users/6000583/screenshots/15207056/media/35add53488047f12ce1e61e045a29edf.jpg" alt="Assassination Classroom cover">
+                  <div class="image-card-overlay">
+                    <h2 class="image-card-title">Assassination Classroom</h2>
+                    <p class="image-card-description">WTF but incredible!</p>
+                  </div>
+                </div>
+                <div class="image-card">
+                  <img src="https://cdn.dribbble.com/users/5755762/screenshots/18582237/media/cb1654a3ae3e4ef360d924d1397939c2.gif" alt="Jujutsu kaisen cover">
+                  <div class="image-card-overlay">
+                    <h2 class="image-card-title">Jujutsu kaisen</h2>
+                    <p class="image-card-description">I'm waiting for the rest!</p>
+                  </div>
+                </div>
+                <div class="image-card">
+                  <img src="https://cdn.dribbble.com/users/1252358/screenshots/2923669/media/50eb28a68a4a266f2941a2a35ef6961f.gif" alt="One-Punch Man cover">
+                  <div class="image-card-overlay">
+                    <h2 class="image-card-title">One-Punch Man</h2>
+                    <p class="image-card-description">Weakness: too strong 😂</p>
+                    <div class="image-card-icon">
+                      <img src="../assets/icon/laughing.png" alt="laughing-icon" srcset="">
+                    </div>
+                  </div>
+                </div>
+                <div class="image-card">
+                  <img src="https://cdn.dribbble.com/userupload/5179218/file/original-d45000dff75d17b94e12720e629e353d.gif" alt="Demon Slayer cover">
+                  <div class="image-card-overlay">
+                    <h2 class="image-card-title">Demon Slayer</h2>
+                    <p class="image-card-description">The most beautiful !</p>
+                    <div class="image-card-icon">
+                      <img src="../assets/icon/star.png" alt="star-icon" srcset="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </section>
+          <section class="card glassmorphism">
+            <div class="card-content">
+              <h1>My pictures</h1>
+              <div class="gallery instagram-style">
+                <div class="image-card">
+                  <img src="./assets/Small/0.jpg" alt="photo of Japan by Mathys Paul 0">
+                </div>
+                <div class="image-card">
+                  <img src="./assets/Small/1.jpg" alt="photo of Japan by Mathys Paul 1">
+                </div>
+                <div class="image-card">
+                  <img src="./assets/Small/2.jpg" alt="photo of Japan by Mathys Paul 2">
+                </div>
+                <div class="image-card">
+                  <img src="./assets/Small/3.jpg" alt="photo of Japan by Mathys Paul 3">
+                </div>
+                <div class="image-card">
+                  <img src="./assets/Small/4.jpg" alt="photo of Japan by Mathys Paul 4">
+                </div>
+                <div class="image-card">
+                  <img src="./assets/Small/5.jpg" alt="photo of Japan by Mathys Paul 5">
+                </div>
+                <div class="image-card">
+                  <img src="./assets/Small/6.jpg" alt="photo of Japan by Mathys Paul 6">
+                </div>
+                <div class="image-card">
+                  <img src="./assets/Small/7.jpg" alt="photo of Japan by Mathys Paul 7">
+                </div>
+                <div class="image-card">
+                  <img src="./assets/Small/8.jpg" alt="photo of Japan by Mathys Paul 8">
+                </div>
+                <div class="image-card">
+                  <img src="./assets/Small/9.jpg" alt="photo of Japan by Mathys Paul 9">
+                </div>
+                <div class="image-card">
+                  <img src="./assets/Small/10.jpg" alt="photo of Japan by Mathys Paul 10">
+                </div>
+                <div class="image-card">
+                  <img src="./assets/Small/11.jpg" alt="photo of Japan by Mathys Paul 11">
+                </div>
+                <div class="image-card">
+                  <img src="./assets/Small/12.jpg" alt="photo of Japan by Mathys Paul 12">
+                </div>
+                <div class="image-card">
+                  <img src="./assets/Small/13.jpg" alt="photo of Japan by Mathys Paul 13">
+                </div>
+                <div class="image-card">
+                  <img src="./assets/Small/14.jpg" alt="photo of Japan by Mathys Paul 14">
+                </div>
+                <div class="image-card">
+                  <img src="./assets/Small/15.jpg" alt="photo of Japan by Mathys Paul 15">
+                </div>
+                <div class="image-card">
+                  <img src="./assets/Small/16.jpg" alt="photo of Japan by Mathys Paul 16">
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="card glassmorphism">
+            <div class="card-content" id="belgium">
+              <h1>Belgium</h1>
+              <div class="dropdown-list">
+                <div class="dropdown-block">
+                  <input type="checkbox" id="toggle-Belgium-Food" class="toggle-info">
+                  <label for="toggle-Belgium-Food" class="label-info">
+                    <div class="dropdown-label">
+                      <div class="dropdown-label-left">
+                        <h2 class="dropdown-label-title">Food</h2>
+                        <ul class="tech-tags"></ul>
+                      </div>
+                      <div class="dropdown-label-right">
+                        <span class="dropdown-label-addon">🍟</span>
+                        <span class="arrow"></span>
+                      </div>
+                    </div>
+                    <div class="dropdown-conent-container">
+                      <div class="dropdown-cotent">
+                        <p>As a Belgian, I take immense pride in our local cuisine. It's a mosaic of flavors, cleverly blending tradition and modernity. Our famous fries, a true national symbol, are delicious served with a variety of sauces or as a side to mussels, another classic of Belgian gastronomy. Belgian waffles and chocolate enjoy a worldwide reputation, and for good reason: their sweetness and finesse are unmatched. Pralines, these chocolate-filled candies, are a true delight. And for cheese lovers, I recommend Herve, a soft cheese with a washed crust, boasting a characteristic taste.</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="dropdown-block">
+                  <input type="checkbox" id="toggle-Belgium-Beers" class="toggle-info">
+                  <label for="toggle-Belgium-Beers" class="label-info">
+                    <div class="dropdown-label">
+                      <div class="dropdown-label-left">
+                        <h2 class="dropdown-label-title">Beers and Music Festivals</h2>
+                        <ul class="tech-tags"></ul>
+                      </div>
+                      <div class="dropdown-label-right">
+                        <span class="dropdown-label-addon">🍺</span>
+                        <span class="arrow"></span>
+                      </div>
+                    </div>
+                    <div class="dropdown-conent-container">
+                      <div class="dropdown-cotent">
+                        <p>Belgium is a country of beer. We have over a thousand different varieties, an impressive brewing wealth. As a native of Chimay, I must particularly mention the Trappist beer that bears the name of my town. Produced by the monks of the Notre-Dame de Scourmont abbey, Chimay offers a range of rich and complex flavors, notably with Chimay Blue, Chimay Red, and Chimay White. In terms of music, Belgium is also well-endowed, with world-renowned festivals such as Tomorrowland and Dour Festival, offering a variety of musical genres.</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="dropdown-block">
+                  <input type="checkbox" id="toggle-Belgium-Art" class="toggle-info">
+                  <label for="toggle-Belgium-Art" class="label-info">
+                    <div class="dropdown-label">
+                      <div class="dropdown-label-left">
+                        <h2 class="dropdown-label-title">Art and Comics</h2>
+                        <ul class="tech-tags"></ul>
+                      </div>
+                      <div class="dropdown-label-right">
+                        <span class="dropdown-label-addon">💥</span>
+                        <span class="arrow"></span>
+                      </div>
+                    </div>
+                    <div class="dropdown-conent-container">
+                      <div class="dropdown-cotent">
+                        <p>Belgium has a rich artistic tradition, ranging from Flemish primitive art to contemporary art. But what I am particularly proud of is our contribution to the art of comics. Characters like Tintin, the courageous reporter created by Hergé, and the Smurfs, the adorable little blue creatures imagined by Peyo, have conquered the world. The Belgian Comic Strip Center in Brussels is a true celebration of this art, showcasing the immense talent of Belgian authors.</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="dropdown-block">
+                  <input type="checkbox" id="toggle-Belgium-Architecture" class="toggle-info">
+                  <label for="toggle-Belgium-Architecture" class="label-info">
+                    <div class="dropdown-label">
+                      <div class="dropdown-label-left">
+                        <h2 class="dropdown-label-title">Architecture</h2>
+                        <ul class="tech-tags"></ul>
+                      </div>
+                      <div class="dropdown-label-right">
+                        <span class="dropdown-label-addon">🏢</span>
+                        <span class="arrow"></span>
+                      </div>
+                    </div>
+                    <div class="dropdown-conent-container">
+                      <div class="dropdown-cotent">
+                        <p>Finally, it is impossible to talk about Belgium without mentioning its architectural heritage. Our country presents a fascinating diversity of styles, from majestic medieval buildings to Art Nouveau wonders. Architect Victor Horta, for example, has left an indelible mark on the urban landscape of Brussels. And how can we not mention Bruges, our "Venice of the North", with its picturesque canals and impeccable historical buildings? This architectural richness testifies to the diversity and evolution of Belgium, a nation that embraces both its past and its future.</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <aside class="scaffold-layout-aside">
+          <section class="card glassmorphism">
+            <div class="card-content">
+              <h1>Main Interests</h1>
+              <ul>
+                <li>Video games</li>
+                <li>Crypto currencies</li>
+                <li>3D (Virtual Reality, Impression, etc.)</li>
+              </ul>
+            </div>
+          </section>
+          <section class="card glassmorphism">
+            <div class="card-content">
+              <h1>Contact me at</h1>
+              <div class="icon-social-media-container">
+                <a href="https://www.linkedin.com/in/mathys-paul/" class="icon-social-media-wrapper">
+                  <svg class="icon-social-media" height="30px" width="30px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                  viewBox="0 0 455 455" xml:space="preserve">
+                    <g>
+                      <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M246.4,204.35v-0.665c-0.136,0.223-0.324,0.446-0.442,0.665H246.4z"/>
+                      <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M0,0v455h455V0H0z M141.522,378.002H74.016V174.906h67.506V378.002z
+                          M107.769,147.186h-0.446C84.678,147.186,70,131.585,70,112.085c0-19.928,15.107-35.087,38.211-35.087
+                        c23.109,0,37.31,15.159,37.752,35.087C145.963,131.585,131.32,147.186,107.769,147.186z M385,378.002h-67.524V269.345
+                        c0-27.291-9.756-45.92-34.195-45.92c-18.664,0-29.755,12.543-34.641,24.693c-1.776,4.34-2.24,10.373-2.24,16.459v113.426h-67.537
+                        c0,0,0.905-184.043,0-203.096H246.4v28.779c8.973-13.807,24.986-33.547,60.856-33.547c44.437,0,77.744,29.02,77.744,91.398V378.002
+                        z"/>
+                    </g>
+               </svg>
+                </a>
+                <a href="https://github.com/mathysPaul" class="icon-social-media-wrapper">
+                  <svg class="icon-social-media" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px" height="30px">
+                    <path d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"></path>
+                  </svg>
+                </a>
+                <a href="https://discord.com/users/419862238757781505" class="icon-social-media-wrapper">
+                  <svg class="icon-social-media" height="30px" width="30px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M40,12c0,0-4.585-3.588-10-4l-0.488,0.976C34.408,10.174,36.654,11.891,39,14c-4.045-2.065-8.039-4-15-4s-10.955,1.935-15,4c2.346-2.109,5.018-4.015,9.488-5.024L18,8c-5.681,0.537-10,4-10,4s-5.121,7.425-6,22c5.162,5.953,13,6,13,6l1.639-2.185C13.857,36.848,10.715,35.121,8,32c3.238,2.45,8.125,5,16,5s12.762-2.55,16-5c-2.715,3.121-5.857,4.848-8.639,5.815L33,40c0,0,7.838-0.047,13-6C45.121,19.425,40,12,40,12z M17.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C21,28.209,19.433,30,17.5,30z M30.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C34,28.209,32.433,30,30.5,30z"></path>
+                  </svg>
+                </a>
+                <a href="mailto:z122266@shibaura-it.ac.jp" class="icon-social-media-wrapper">
+                  <svg class="icon-social-media" width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 427.8703 384">
+                    <path d="M365.8777,55.31H61.9978a40.04,40.04,0,0,0-40,40V288.97a40.0467,40.0467,0,0,0,40,40h303.88a40.0466,40.0466,0,0,0,40-40V95.31A40.04,40.04,0,0,0,365.8777,55.31Zm-2.66,24-146.65,123.11a3.9914,3.9914,0,0,1-5.14,0L64.6678,79.31Zm18.66,209.66a16.0019,16.0019,0,0,1-16,16H61.9978a16.002,16.002,0,0,1-16-16V95.31c0-.11,0-.22.01-.33l150,125.83a27.9451,27.9451,0,0,0,35.99-.01l149.87-125.81c.01.1.01.21.01.32Z" />
+                  </svg>
+                </a>
+                <a href="https://www.instagram.com/mathyspaul/" class="icon-social-media-wrapper">
+                  <svg class="icon-social-media" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="30px" height="30px" fill-rule="nonzero">
+                    <g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                      <g transform="scale(8,8)">
+                        <path d="M11.46875,5c-3.55078,0 -6.46875,2.91406 -6.46875,6.46875v9.0625c0,3.55078 2.91406,6.46875 6.46875,6.46875h9.0625c3.55078,0 6.46875,-2.91406 6.46875,-6.46875v-9.0625c0,-3.55078 -2.91406,-6.46875 -6.46875,-6.46875zM11.46875,7h9.0625c2.47266,0 4.46875,1.99609 4.46875,4.46875v9.0625c0,2.47266 -1.99609,4.46875 -4.46875,4.46875h-9.0625c-2.47266,0 -4.46875,-1.99609 -4.46875,-4.46875v-9.0625c0,-2.47266 1.99609,-4.46875 4.46875,-4.46875zM21.90625,9.1875c-0.50391,0 -0.90625,0.40234 -0.90625,0.90625c0,0.50391 0.40234,0.90625 0.90625,0.90625c0.50391,0 0.90625,-0.40234 0.90625,-0.90625c0,-0.50391 -0.40234,-0.90625 -0.90625,-0.90625zM16,10c-3.30078,0 -6,2.69922 -6,6c0,3.30078 2.69922,6 6,6c3.30078,0 6,-2.69922 6,-6c0,-3.30078 -2.69922,-6 -6,-6zM16,12c2.22266,0 4,1.77734 4,4c0,2.22266 -1.77734,4 -4,4c-2.22266,0 -4,-1.77734 -4,-4c0,-2.22266 1.77734,-4 4,-4z"></path>
+                      </g>
+                    </g>
+                  </svg>
+                </a>
+                <a href="https://twitter.com/mathyspaul" class="icon-social-media-wrapper">
+                  <svg class="icon-social-media" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px">
+                    <path d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </main>
+    <footer>
+      <hr>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Course Information</h3>
+          <p>Midterm Group Project for Web Design & Programming</p>
+          <p>Shibaura institute of technology, 2023</p>
+        </div>
+        <div class="footer-section">
+          <h3>Group Members</h3>
+          <ul>
+            <li>
+              <a href="mailto:z122266@shibaura-it.ac.jp"  class="icon-social-media-wrapper">
+                <svg  class="icon-social-media" height="30px" width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 427.8703 384">
+                  <path d="M365.8777,55.31H61.9978a40.04,40.04,0,0,0-40,40V288.97a40.0467,40.0467,0,0,0,40,40h303.88a40.0466,40.0466,0,0,0,40-40V95.31A40.04,40.04,0,0,0,365.8777,55.31Zm-2.66,24-146.65,123.11a3.9914,3.9914,0,0,1-5.14,0L64.6678,79.31Zm18.66,209.66a16.0019,16.0019,0,0,1-16,16H61.9978a16.002,16.002,0,0,1-16-16V95.31c0-.11,0-.22.01-.33l150,125.83a27.9451,27.9451,0,0,0,35.99-.01l149.87-125.81c.01.1.01.21.01.32Z" />
+                </svg>
+              </a>
+              <a href="../tramy/index.html">Tra&nbsp;My</a>
+            </li>
+            <li>
+              <a href="mailto:z122266@shibaura-it.ac.jp"  class="icon-social-media-wrapper">
+                <svg  class="icon-social-media" height="30px" width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 427.8703 384">
+                  <path d="M365.8777,55.31H61.9978a40.04,40.04,0,0,0-40,40V288.97a40.0467,40.0467,0,0,0,40,40h303.88a40.0466,40.0466,0,0,0,40-40V95.31A40.04,40.04,0,0,0,365.8777,55.31Zm-2.66,24-146.65,123.11a3.9914,3.9914,0,0,1-5.14,0L64.6678,79.31Zm18.66,209.66a16.0019,16.0019,0,0,1-16,16H61.9978a16.002,16.002,0,0,1-16-16V95.31c0-.11,0-.22.01-.33l150,125.83a27.9451,27.9451,0,0,0,35.99-.01l149.87-125.81c.01.1.01.21.01.32Z" />
+                </svg>
+              </a>
+              <a href="../marine/index.html">Marine</a>
+            </li>
+            <li>
+              <a href="mailto:z122266@shibaura-it.ac.jp"  class="icon-social-media-wrapper">
+                <svg  class="icon-social-media" height="30px" width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 427.8703 384">
+                  <path d="M365.8777,55.31H61.9978a40.04,40.04,0,0,0-40,40V288.97a40.0467,40.0467,0,0,0,40,40h303.88a40.0466,40.0466,0,0,0,40-40V95.31A40.04,40.04,0,0,0,365.8777,55.31Zm-2.66,24-146.65,123.11a3.9914,3.9914,0,0,1-5.14,0L64.6678,79.31Zm18.66,209.66a16.0019,16.0019,0,0,1-16,16H61.9978a16.002,16.002,0,0,1-16-16V95.31c0-.11,0-.22.01-.33l150,125.83a27.9451,27.9451,0,0,0,35.99-.01l149.87-125.81c.01.1.01.21.01.32Z" />
+                </svg>
+              </a>
+              <a href="../mathys/index.html">Mathys</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Resources & Credits</h3>
+          <p>Website built using HTML and CSS, following W3Schools tutorials.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Group Name. All rights reserved. Created for educational purposes only.</p>
+      </div>
+    </footer>
+  </body>
+</html>

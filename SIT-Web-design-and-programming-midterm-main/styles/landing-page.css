@@ -1,0 +1,117 @@
+:root {
+    /* Landing Page */
+    --landing-page-min-height: calc(100vh - var(--menu-height));
+    --landing-page-title-font-size: var(--font-size-xxl);
+
+    /* Sun size */
+    --sun-size: 40vmax;
+    --sun-max-size: 40rem;
+
+    /* Gap */
+    --our-opinion-gap: var(--spacer-xl);
+    --text-with-image-gap: var(--spacer-md);
+
+    /* Image */
+    --text-with-image-img-border-radius: var(--border-radius-md);
+    --text-with-image-img-box-shadow: var(--box-shadow);
+    --text-with-image-img-border: var(--border);
+    --text-with-image-img-padding-top: var(--spacer-xl);
+
+    /* image/text ratio */
+    --text-with-image-text-ratio: 2;
+    --text-with-image-image-ratio: 1;
+}
+
+/* Landing Page */
+.landing-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    row-gap: 0;
+    column-gap: var(--text-with-image-gap);
+    width: 100%;
+    min-height: var(--landing-page-min-height);
+}
+
+.landing-page-title,
+.sun-container,
+.landing-page-description {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-page-title {
+    font-size: var(--landing-page-title-font-size);
+}
+
+.sun-container {
+    padding-inline: 0;
+}
+
+.sun {
+    display: flex;
+    width: var(--sun-size);
+    height: var(--sun-size);
+    max-width: var(--sun-max-size);
+    max-height: var(--sun-max-size);
+    border-radius: var(--sun-size);
+    background-color: var(--primary-color);
+}
+
+/* Our opinion */
+.our-opinion {
+    display: flex;
+    flex-direction: column;
+    gap: var(--our-opinion-gap);
+}
+
+.text-with-image {
+    display: flex;
+    gap: var(--text-with-image-gap);
+}
+
+.text-with-image.left {
+    flex-direction: row-reverse;
+}
+
+.text-with-image img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: var(--text-with-image-img-border-radius);
+    box-shadow: var(--text-with-image-img-box-shadow);
+    border: var(--text-with-image-img-border);
+}
+
+.text-with-image .text {
+    display: flex;
+    flex-direction: column;
+    flex: var(--text-with-image-text-ratio);
+    align-items: center;
+    justify-content: center;
+}
+
+.text-with-image .image {
+    flex: var(--text-with-image-image-ratio);
+    display: flex;
+    padding-top: var(--text-with-image-img-padding-top);
+}
+
+@media (max-width: 991px) {
+    .landing-page {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-with-image.left,
+    .text-with-image.right {
+        flex-direction: column-reverse;
+    }
+
+    .text-with-image img {
+        width: 100%;
+        max-height: unset;
+        max-width: unset;
+    }
+}

@@ -1,0 +1,208 @@
+/*
+Base on this codepen.io timeline : https://codepen.io/codyhouse/pen/OJgRvj
+*/
+
+:root {
+  --timeline-color: var(--accent-color);
+  /* var(--primary-background-color); */
+
+  --space-between-block: var(--spacer-md);
+  --space-between-markers-and-event: var(--spacer-xs);
+
+  /* Vertical Line */
+  --line-start-height: var(--spacer-md);
+  --line-width: 5px;
+  --line-color: var(--timeline-color);
+
+  /* Marker */
+  --marker-size-md: 50px;
+  --marker-size-lg: 60px;
+  --marker-border: solid 5px white;
+  --marker-padding: var(--spacer-xs);
+  --marker-color: var(--primary-color);
+
+  /* Event */
+  --event-title-size: var(--font-size-lg);
+  --event-title-margin: var(--spacer-xs);
+  --event-title-color: var(--secondary-color);
+  --event-border-radius: var(--border-radius-md);
+  --event-padding: var(--spacer-xs);
+  --event-bg-color: var(--timeline-color);
+
+  /* Arrow */
+  --timeline-arrow-height: 6px;
+  --timeline-arrow-width: 12px;
+}
+
+/* ------------------------------------------
+Timeline
+------------------------------------------ */
+.timeline {
+  position: relative;
+  padding: var(--line-start-height) 0;
+}
+
+/* ------------------------------------------
+Vertical line
+------------------------------------------ */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc((var(--marker-size-md) - var(--line-width)) / 2);
+  height: 100%;
+  width: var(--line-width);
+  background: var(--line-color);
+}
+
+/* ------------------------------------------
+Block
+------------------------------------------ */
+.timeline-block {
+  position: relative;
+  margin: var(--space-between-block) 0;
+}
+
+.timeline-block:first-child {
+  margin-top: 0;
+}
+.timeline-block:last-child {
+  margin-bottom: 0;
+}
+
+/*
+The CSS rule ::after is used to create an empty element after each timeline block,
+helping to manage the positioning of floated elements and ensure consistent layout.
+*/
+.timeline-block::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/* ------------------------------------------
+Chronology markers (
+------------------------------------------ */
+.chronology-marker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--marker-size-md);
+  height: var(--marker-size-md);
+  border-radius: 50%;
+  border: var(--marker-border);
+  overflow: hidden;
+  background: var(--marker-color);
+}
+
+.chronology-marker img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: var(--marker-padding);
+  object-fit: contain;
+}
+
+/* ------------------------------------------
+Event (Title, paragraph, date, arrow)
+------------------------------------------ */
+.event {
+  position: relative;
+  margin-left: calc(var(--marker-size-md) + var(--timeline-arrow-width) + var(--space-between-markers-and-event));
+  background: var(--event-bg-color);
+  border-radius: var(--event-border-radius);
+  padding: var(--event-padding);
+}
+
+.event-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.event-title {
+  font-size: var(--event-title-size);
+  margin: var(--event-title-margin) 0;
+  color: var(--event-title-color);
+}
+
+.event-paragraph {
+  line-height: 1;
+  margin: 0;
+}
+
+.event-date {
+  opacity: 0.7;
+}
+
+/* Arrow */
+.event::before {
+  content: "";
+  position: absolute;
+  top: calc((var(--marker-size-md) / 2) - var(--timeline-arrow-height));
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: var(--timeline-arrow-height) solid transparent;
+  border-right: var(--timeline-arrow-width) solid var(--event-bg-color);
+}
+
+/* ------------------------------------------
+Responsive
+------------------------------------------ */
+@media only screen and (min-width: 1200px) {
+  /* ------------------------------------------
+  Vertical line
+  ------------------------------------------ */
+  .timeline::before {
+    left: 50%;
+    margin-left: calc(-1 * var(--line-width) / 2);
+  }
+
+  /* ------------------------------------------
+  Block
+  ------------------------------------------ */
+  .timeline-block.right .event {
+    float: right;
+  }
+
+  .timeline-block.right .event::before {
+    left: auto;
+    border-color: transparent;
+    border-right: var(--timeline-arrow-width) solid var(--event-bg-color);
+
+  }
+
+  /* ------------------------------------------
+  Chronology markers
+  ------------------------------------------ */
+  .chronology-marker {
+    width: var(--marker-size-lg);
+    height: var(--marker-size-lg);
+    left: 50%;
+    margin-left: calc(-1 * var(--marker-size-lg) / 2);
+  }
+
+  /* ------------------------------------------
+  Event
+  ------------------------------------------ */
+  .event {
+    /* box-sizing: border-box; */
+    margin-left: 0;
+    padding: var(--event-padding);
+    width: calc(50% - (var(--marker-size-lg) / 2) - var(--timeline-arrow-width) - var(--space-between-markers-and-event));
+  }
+
+  .event-header {
+    flex-direction: row;
+  }
+
+  /* Arrow  */
+  .event::before {
+    top: calc((var(--marker-size-lg) / 2) - var(--timeline-arrow-height));
+    left: 100%;
+    border-color: transparent;
+    border-left: var(--timeline-arrow-width) solid var(--event-bg-color);
+
+  }
+}

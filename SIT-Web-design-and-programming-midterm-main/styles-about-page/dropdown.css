@@ -1,0 +1,200 @@
+:root {
+    /* Project */
+    --dropdown-list-gap: var(--spacer-xs);
+    --dropdown-block-min-width: 250px;
+    --dropdown-block-padding-inline: var(--spacer-xs);
+    --dropdown-block-background-color: var(--accent-color);
+    --dropdown-block-border-radius: var(--border-radius-xs);
+    --dropdown-label-font-size: var(--font-size-md);
+    --dropdown-label-margin: var(--spacer-xxs);
+
+    /* List of technologies */
+    --tech-tags-margin-right: var(--spacer-md);
+    --tags-gap: var(--spacer-xxs);
+    --tags-item-padding: var(--spacer-xxs) var(--spacer-xxs);
+    --tags-item-border-radius: var(--border-radius-xxs);
+    --tags-item-font-size: var(--font-size-xs);
+    
+    --tech-tags-item-bg-color: var(--tech-tags-color);
+    --keyword-tags-item-bg-color: var(--keywords-tags-color);
+
+    /* Additional info */
+    --dropdown-conent-container-transition: var(--duration-moderate);
+    --dropdown-conent-container-font-size: var(--font-size-xs);
+
+    /* Arrow */
+    --arrow-padding: var(--spacer-xs);
+    --arrow-width: 8px;
+    --arrow-height: 2px;
+    --arrow-left: 4px;
+    --arrow-top: -2px;
+    --arrow-border-radius: var(--border-radius-md);
+    --arrow-background-color: var(--text-color);
+    --arrow-transition: var(--duration-moderate);
+}
+
+/* ------------------------------------------
+Dropdown List
+------------------------------------------ */
+.dropdown-list {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--dropdown-list-gap);
+}
+
+/* ------------------------------------------
+Dropdown
+------------------------------------------ */
+.dropdown-block {
+    min-width: var(--dropdown-block-min-width);
+    padding-inline: var(--dropdown-block-padding-inline);
+    position: relative;
+    background-color: var(--dropdown-block-background-color);
+    border-radius: var(--dropdown-block-border-radius);
+    overflow: hidden;
+}
+
+/* ------------------------------------------
+Label
+------------------------------------------ */
+.dropdown-label {
+    display: flex;
+}
+
+.dropdown-label-left {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    flex: 1;
+}
+
+.dropdown-label-right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.dropdown-label-title {
+    font-size: var(--dropdown-label-font-size);
+    top: 0;
+    margin: var(--dropdown-label-margin);
+}
+
+.dropdown-label-addon {
+    font-size: var(--dropdown-label-font-size);
+}
+
+/* ------------------------------------------
+Tech list & keyword
+------------------------------------------ */
+.tech-tags, .keyword-tags {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--tags-gap);
+    align-items: baseline;
+    margin: 0;
+}
+
+.tech-tags li, .keyword-tags li {
+    display: inline-block;
+    background-color: var(--tech-tags-item-bg-color);
+    padding: var(--tags-item-padding);
+    border-radius: var(--tags-item-border-radius);
+    font-size: var(--tags-item-font-size);
+}
+
+.tech-tags {
+    margin-right: var(--tech-tags-margin-right);
+}
+
+.keyword-tags::before {
+    content: "Keywords: ";
+}
+
+.keyword-tags li {
+    background-color: var(--keyword-tags-item-bg-color);
+}
+
+/* ------------------------------------------
+Content
+------------------------------------------ */
+.dropdown-conent-container {
+    max-height: 0;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: var(--dropdown-conent-container-transition);
+    overflow: hidden;
+    font-size: var(--dropdown-conent-container-font-size);
+}
+
+.dropdown-cotent {
+    opacity: 0;
+    transition: var(--dropdown-conent-container-transition);
+}
+
+.dropdown-cotent img {
+    max-width: 100%;
+}
+
+/* ------------------------------------------
+Arrow Animation
+------------------------------------------ */
+.arrow {
+    padding: var(--arrow-padding);
+    height: var(--arrow-width);
+}
+
+.arrow::before,
+.arrow::after {
+    position: relative;
+    content: '';
+    display: block;
+    width: var(--arrow-width);
+    height: var(--arrow-height);
+    border-radius: var(--arrow-border-radius);
+    background: var(--arrow-background-color);
+    transition: var(--arrow-transition);
+}
+
+.arrow::before {
+    transform: rotate(45deg);
+}
+
+.arrow::after {
+    left: var(--arrow-left);
+    top: var(--arrow-top);
+    transform: rotate(-45deg);
+}
+
+/* ------------------------------------------
+Toggle's behaviour
+------------------------------------------ */
+.toggle-info {
+    display: none;
+}
+
+.toggle-info:checked ~ .label-info .dropdown-conent-container {
+    max-height: fit-content;
+    transform: scaleY(1);
+}
+
+.toggle-info:checked ~ .label-info .dropdown-cotent {
+    opacity: 1;
+}
+
+.toggle-info:checked ~ .label-info .arrow::before {
+    transform: rotate(-45deg);
+}
+
+.toggle-info:checked ~ .label-info .arrow::after {
+    transform: rotate(45deg);
+}

@@ -1,0 +1,77 @@
+/*
+The CSS property box-sizing: border-box;
+
+makes the width and height of an element include its padding and border,
+but not the margin. This simplifies layout,
+as the total size of the element is equal to the specified width or height.
+*/
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--main-font);
+    font-variation-settings: var(--font-variation-settings-default);
+    background-color: var(--secondary-background-color);
+    color: var(--text-color);
+    margin: 0;
+    font-size: var(--font-size-md);
+    overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+    max-width: var(--page-width);
+    margin: auto;
+    background-color: var(--primary-background-color);
+}
+
+h1 {
+    font-size: var(--font-size-xxl);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: var(--font-size-xl);
+}
+
+h3 {
+    font-size: var(--font-size-lg);
+}
+
+h4 {
+    font-size: var(--font-size-md);
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: color var(--duration-slow);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+b {
+    font-variation-settings: var(--font-variation-settings-bold);
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Big screen (desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

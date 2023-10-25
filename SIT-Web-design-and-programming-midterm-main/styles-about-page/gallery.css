@@ -1,0 +1,106 @@
+:root {
+    --image-md-min-size: 140px;
+    --image-lg-min-size: 300px;
+    --image-card-border-radius: var(--border-radius-sm);
+
+    --gallery-gap: var(--spacer-sm);
+    --image-card-padding: var(--spacer-xs);
+
+    --transition-duration: var(--duration-slow);
+
+    --overlay-background: var(--overlay-bg-color);
+    --overlay-initial-height: 3rem;
+
+    --image-text-color: white;
+    --image-card-icon-size: 1rem;
+    --image-card-title-font-size: 1rem;
+    --image-card-description-font-size: 0.9rem;
+
+    --instagram-style-image-border-radius: 0;
+}
+
+/* ------------------------------------------
+Gallery
+------------------------------------------ */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--image-md-min-size), 1fr));
+    gap: var(--gallery-gap);
+}
+
+.gallery.instagram-style {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* ------------------------------------------
+Image card
+------------------------------------------ */
+.image-card {
+    position: relative;
+    border-radius: var(--image-card-border-radius);
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.instagram-style .image-card {
+    border-radius: var(--instagram-style-image-border-radius);
+}
+
+.square-gallery .image-card img {
+    aspect-ratio: 1;
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ------------------------------------------
+Overlay
+------------------------------------------ */
+.image-card-overlay {
+    position: absolute;
+    bottom: 0;
+    background: var(--overlay-background);
+    color: var(--image-text-color);
+    width: 100%;
+    transition: height var(--transition-duration) ease-in-out;
+    height: var(--overlay-initial-height);
+    overflow: hidden;
+}
+
+.image-card-title,
+.image-card-description {
+    text-align: center;
+    padding: 0 var(--image-card-padding);
+    transition: opacity var(--transition-duration) ease-in-out;
+}
+
+.image-card-title {
+    font-size: var(--image-card-title-font-size);
+    margin: 0;
+    padding: var(--image-card-padding) 0;
+}
+
+.image-card-description {
+    font-size: var(--image-card-description-font-size);
+    opacity: 0;
+}
+
+.image-card-icon {
+    position: absolute;
+    right: var(--image-card-padding);
+    bottom: var(--image-card-padding);
+    width: var(--image-card-icon-size);
+}   
+
+.image-card:hover .image-card-overlay {
+    height: 100%;
+}
+
+.image-card:hover .image-card-description  {
+    opacity: 1;
+}

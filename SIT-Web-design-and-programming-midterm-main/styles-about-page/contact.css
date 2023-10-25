@@ -1,0 +1,50 @@
+:root {
+  --icon-primary-color: var(--primary-color);
+  --icon-secondary-color: #ffffff;
+  --icon-size: var(--font-size-xl);
+  --gap-between-icon: var(--spacer-xs);
+  --transition-duration: var(--duration-moderate);
+  --transition-timing: ease-in-out;
+  --icon-border-radius: var(--border-radius-sm);
+  --scale-factor: 1.1;
+  --padding: var(--spacer-xs);
+}
+
+.icon-social-media-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap-between-icon);
+}
+
+.icon-social-media-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--padding);
+  background: var(--icon-secondary-color);
+  border-radius: var(--icon-border-radius);
+  transition: var(--transition-duration) var(--transition-timing);
+  will-change: transform, background-color;
+}
+
+.icon-social-media {
+  fill: var(--icon-primary-color);
+  height: var(--icon-size);
+  width: var(--icon-size);
+}
+
+.icon-social-media-wrapper:hover,
+.icon-social-media-wrapper:focus,
+.icon-social-media-wrapper:active {
+  cursor: pointer;
+  transform: scale(var(--scale-factor));
+  background-color: var(--icon-primary-color);
+}
+
+.icon-social-media-wrapper:hover .icon-social-media,
+.icon-social-media-wrapper:focus .icon-social-media,
+.icon-social-media-wrapper:active .icon-social-media {
+  fill: var(--icon-secondary-color);
+}

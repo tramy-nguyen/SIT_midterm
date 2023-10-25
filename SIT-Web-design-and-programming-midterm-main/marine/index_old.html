@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web design & programming</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:slnt,wdth,wght,GRAD@0,151,350,10&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/theme.css">
+    <link rel="stylesheet" href="../styles/generic.css">
+    <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="stylesheet" href="../styles/scaffold-layout.css">
+    <link rel="stylesheet" href="../styles/landing-page.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">
+        <a href="../index.html">SIT</a>
+      </h1>
+      <div class="full-background glassmorphism"></div>
+      <input type="checkbox" id="toggle-menu">
+      <label for="toggle-menu" class="hamburger">
+        <span class="text-toggle-menu">Menu</span>
+        <svg viewBox="0 0 32 32">
+          <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+          <path class="line" d="M7 16 27 16"></path>
+        </svg>
+      </label>
+      <label for="toggle-menu" class="overlay"></label>
+      <nav class="menu">
+        <ul>
+          <li>
+            <a class="menu-link" href="../index.html">Home</a>
+          </li>
+          <li>
+            <a class="menu-link" href="../tramy/index.html">Tra&nbsp;My</a>
+          </li>
+          <li>
+            <a class="menu-link active" href="./index.html">Marine</a>
+          </li>
+          <li>
+            <a class="menu-link" href="../mathys/index.html">Mathys</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <ul class="grid-container">
+        <li class="square default-grid">
+          <h3>Welcome!</h3>
+          Hello! I'm Marine Schulz, a 21 years old French student at Shibaura Institute of Technology!
+        </li>
+        <li class="portrait default-grid">
+          <h3>My hobbies!</h3>
+          I love playing video games, reading mangas and watching animes! I also love programming in my free time and learning new things!
+        </li>
+        <li class="landscape default-grid">
+          <h3>My experience of Japan!</h3>
+          <p>I've been in Japan for a few months already, and I have completely fallen in love for this place!</p>
+          <p>The culture is rich and amazing to experience, the people are kind and welcoming, and the food is delicious! (except for Natto, I don't like Natto)</p>
+          <p>I wish I could stay here for longer, so I'll do my best to come back here in the future!</p>
+          <img src="./images/20230503_175313.jpg" alt="Japan" width="100%">
+        </li>
+        <li class="default-grid">
+          <h3>My cursus!</h3>
+          <p>
+            My home university is <a href="https://epitech.eu/" target="_blank">EPITECH</a> in France, it's a 5 years cursus in computer science.
+          </p>
+          <p>
+            I'm currently in the 4th year, which has to be done abroad, so I chose to come to Japan!
+          </p>
+          <a href="https://epitech.eu/" target="_blank">
+            <img src="./images/epitech.png" alt="Epitech logo" width="100%">
+          </a>
+        </li>
+        <li class="portrait default-grid">
+          <h3>My favorite animes!</h3>
+          <ul>
+            <li>
+              <img src="./images/uma-musume.jpg" alt="Uma Musume Season 2 promo image" width="50%">
+              <h4>Uma Musume: Pretty Derby</h4>
+            </li>
+            <li>
+              <img src="./images/violet-evergarden.jpg" alt="Violet Evergarden promo image" width="50%">
+              <h4>Violet Evergarden</h4>
+            </li>
+            <li>
+              <img src="./images/bakemonogatari.jpg" alt="Bakemonogatari promo image" width="50%">
+              <h4>Monogatari</h4>
+            </li>
+          </ul>
+        </li>
+        <li class="portrait default-grid">
+          <h3>My favorite mangas!</h3>
+          <ul>
+            <li>
+              <img src="./images/Cinderella_Gray_Cover_1.webp" alt="Cinderella Gray 1st cover" width="50%">
+              <h4>Uma Musume: Cinderella Gray</h4>
+            </li>
+            <li>
+              <img src="./images/one-piece.jpg" alt="One Piece 1st cover" width="50%">
+              <h4>One Piece</h4>
+            </li>
+            <li>
+              <img src="./images/darwins-game.jpg" alt="Darwin's Game 1st cover" width="50%">
+              <h4>Darwin's Game</h4>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </main>
+      <footer>
+      <hr>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Course Information</h3>
+          <p>Midterm Group Project for Web Design & Programming</p>
+          <p>Shibaura institute of technology, 2023</p>
+        </div>
+        <div class="footer-section">
+          <h3>Group Members</h3>
+          <ul>
+            <li>
+              <a href="mailto:z122266@shibaura-it.ac.jp">
+                <svg width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 427.8703 384">
+                  <path d="M365.8777,55.31H61.9978a40.04,40.04,0,0,0-40,40V288.97a40.0467,40.0467,0,0,0,40,40h303.88a40.0466,40.0466,0,0,0,40-40V95.31A40.04,40.04,0,0,0,365.8777,55.31Zm-2.66,24-146.65,123.11a3.9914,3.9914,0,0,1-5.14,0L64.6678,79.31Zm18.66,209.66a16.0019,16.0019,0,0,1-16,16H61.9978a16.002,16.002,0,0,1-16-16V95.31c0-.11,0-.22.01-.33l150,125.83a27.9451,27.9451,0,0,0,35.99-.01l149.87-125.81c.01.1.01.21.01.32Z" />
+                </svg>
+              </a>
+              <a href="../tramy/index.html">Tra&nbsp;My</a>
+            </li>
+            <li>
+              <a href="mailto:z122201@shibaura-it.ac.jp">
+                <svg width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 427.8703 384">
+                  <path d="M365.8777,55.31H61.9978a40.04,40.04,0,0,0-40,40V288.97a40.0467,40.0467,0,0,0,40,40h303.88a40.0466,40.0466,0,0,0,40-40V95.31A40.04,40.04,0,0,0,365.8777,55.31Zm-2.66,24-146.65,123.11a3.9914,3.9914,0,0,1-5.14,0L64.6678,79.31Zm18.66,209.66a16.0019,16.0019,0,0,1-16,16H61.9978a16.002,16.002,0,0,1-16-16V95.31c0-.11,0-.22.01-.33l150,125.83a27.9451,27.9451,0,0,0,35.99-.01l149.87-125.81c.01.1.01.21.01.32Z" />
+                </svg>
+              </a>
+              <a href="./index.html">Marine</a>
+            </li>
+            <li>
+              <a href="mailto:z122266@shibaura-it.ac.jp">
+                <svg height="30px" width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 427.8703 384">
+                  <path d="M365.8777,55.31H61.9978a40.04,40.04,0,0,0-40,40V288.97a40.0467,40.0467,0,0,0,40,40h303.88a40.0466,40.0466,0,0,0,40-40V95.31A40.04,40.04,0,0,0,365.8777,55.31Zm-2.66,24-146.65,123.11a3.9914,3.9914,0,0,1-5.14,0L64.6678,79.31Zm18.66,209.66a16.0019,16.0019,0,0,1-16,16H61.9978a16.002,16.002,0,0,1-16-16V95.31c0-.11,0-.22.01-.33l150,125.83a27.9451,27.9451,0,0,0,35.99-.01l149.87-125.81c.01.1.01.21.01.32Z" />
+                </svg>
+              </a>
+              <a href="../mathys/index.html">Mathys</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Resources & Credits</h3>
+          <p>Website built using HTML and CSS, following W3Schools tutorials.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Group Name. All rights reserved. Created for educational purposes only.</p>
+      </div>
+    </footer>
+  </body>
+</html>

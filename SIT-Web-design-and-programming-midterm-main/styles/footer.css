@@ -1,0 +1,101 @@
+:root {
+    --footer-line-height: 1.5;
+    --footer-font-size: var(--font-size-sm);
+
+    /* TODO Maybe remove --footer-margin-top */
+    /* --footer-margin-top: 0; */
+    --footer-padding-bottom: var(--spacer-lg);
+
+    /* Footer Container contain 3 cols (sections): Course Information, Group Members and Resources & Credits*/ 
+    --footer-container-max-width: var(--page-width);
+    --footer-container-padding-inline: var(--spacer-md);
+
+    /* Footer Sections */
+    --footer-section-min-width: 250px;
+    --footer-section-gap: var(--spacer-lg);
+
+    --footer-section-title-font-size: var(--font-size-lg);
+    --footer-section-title-margin-bottom: var(--spacer-md);
+
+    --footer-section-list-gap: var(--spacer-md);
+    --footer-section-item-gap: var(--spacer-xs);
+
+    --footer-section-icon-fill: var(--primary-color);
+    --footer-section-icon-hover-fill: var(--secondary-color);
+
+    /* Footer bottom with copyright */
+    --footer-bottom-font-size: var(--font-size-xs);
+    --footer-bottom-margin-top: var(--spacer-md);
+}
+
+/* Footer */
+footer {
+    font-size: var(--footer-font-size);
+    line-height: var(--footer-line-height);
+    padding-bottom: var(--footer-padding-bottom);
+    /* margin-top: var(--footer-margin-top); */
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: var(--footer-container-max-width);
+    margin: 0 auto;
+    gap: var(--footer-section-gap);
+    padding-inline: var(--footer-container-padding-inline);
+}
+
+.footer-section {
+    flex: 1;
+    min-width: var(--footer-section-min-width);
+}
+
+.footer-section a {
+    display: flex;
+    align-items: center;
+}
+
+.footer-section h3 {
+    font-size: var(--footer-section-title-font-size);
+    margin-bottom: var(--footer-section-title-margin-bottom);
+}
+
+.footer-section ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--footer-section-list-gap);
+}
+
+.footer-section li {
+    display: flex;
+    width: max-content;
+    gap: var(--footer-section-item-gap);
+}
+
+.footer-section svg {
+    fill: var(--footer-section-icon-fill);
+    transition: fill var(--duration-slow);
+}
+
+.footer-section svg:hover {
+    fill: var(--footer-section-icon-hover-fill);
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: var(--footer-bottom-font-size);
+    margin-top: var(--footer-bottom-margin-top);
+}
+
+/* Responsive design */
+@media (max-width: 767px) {
+    .footer-section {
+        min-width: 100%;
+        text-align: center;
+    }
+
+    .footer-section ul {
+        justify-content: center;
+    }
+}

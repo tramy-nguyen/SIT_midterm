@@ -1,0 +1,114 @@
+:root {
+    --profile-picture-sm-size: 20vmin;
+    --profile-picture-md-size: 100px;
+    --profile-picture-lg-size: 150px;
+    --profile-picture-xl-size: 210px;
+
+    --profile-picture-border: solid 5px white;
+    --profile-picture-duration-transition: var(--duration-moderate);
+    --banner-border-radius: var(--border-radius-md)
+}
+
+/* ------------------------------------------
+Banner
+------------------------------------------ */
+.profile-banner {
+    width: 100%;
+    height: min-content;
+    object-fit: cover;
+    max-height: 396px;
+    border-radius: var(--banner-border-radius);
+}
+
+/* ------------------------------------------
+Profile picture
+------------------------------------------ */
+.top-profile-picture {
+    position: absolute;
+    margin-top: calc(-1 * (var(--profile-picture-sm-size)));
+    transition: margin-top var(--profile-picture-duration-transition) linear;
+}
+
+.profile-picture {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: var(--profile-picture-sm-size);
+    height: var(--profile-picture-sm-size);
+    transition: width var(--profile-picture-duration-transition) linear,
+                height var(--profile-picture-duration-transition) linear;
+    object-fit: cover;
+    border-radius: 100%;
+    border: var(--profile-picture-border);
+
+}
+
+/* ------------------------------------------
+Flag
+------------------------------------------ */
+.profile-flag {
+    height: 100%;
+    width: var(--font-size-xxl);
+}
+
+/* ------------------------------------------
+Location
+------------------------------------------ */
+.location {
+    float: right;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.location::before {
+    content: '';
+    display: block;
+    background: url("https://pngimg.com/uploads/google_maps_pin/google_maps_pin_PNG76.png");
+    background-size: 1.4rem;
+    background-repeat: no-repeat;
+    height: 1.4rem;
+    width: 1.4rem;
+    margin-right: var(--spacer-xxs);
+}
+
+/* ------------------------------------------
+Responsive
+------------------------------------------ */
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .profile-picture {
+        width: var(--profile-picture-md-size);
+        height: var(--profile-picture-md-size);
+    }
+
+    .top-profile-picture {
+      margin-top: calc(-1 * (var(--profile-picture-md-size)));
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .profile-picture {
+        width: var(--profile-picture-lg-size);
+        height: var(--profile-picture-lg-size);
+    }
+
+    .top-profile-picture {
+      margin-top: calc(-1 * (var(--profile-picture-lg-size)));
+    }
+}
+
+/* Big screen (desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .profile-picture {
+        width: var(--profile-picture-xl-size);
+        height: var(--profile-picture-xl-size);
+    }
+
+    .top-profile-picture {
+      margin-top: calc(-1 * (var(--profile-picture-xl-size)));
+    }
+}
+
